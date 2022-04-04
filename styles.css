@@ -51,28 +51,11 @@ button:hover {
 p {
     color: white;
     font-size: 20px;
+    margin-top: 20px;
     text-align: center;
 }
 
 a {
     color: #E63946;
-    display: inline-block;
-    margin-top: 20px;
-    position: relative;
     text-decoration: none;
-}
-
-a::after {
-    background-color: #E63946;
-    content: "";
-    height: 2px;
-    left:0;
-    position: absolute;
-    top: 100%;
-    transition: width .3s ease-in-out;
-    width: 0;
-}
-
-a:hover:after {
-    width: 100%;
 }
