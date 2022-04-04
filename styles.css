@@ -1,10 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Tera&display=swap');
+
 * {
+    font-family: 'Lexend Tera', sans-serif;
     margin: 0;
     padding: 0;
 }
 
 body {
+    align-content: center;
     background-color: #14213d;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
 }
 
 #calculator {
@@ -12,7 +20,6 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 100px);
     grid-template-rows: minmax(120px, auto) repeat(5, 100px);
-    height: 100vh;
     justify-content: center;
 }
 
@@ -39,4 +46,33 @@ button {
 
 button:hover {
     background-color: rgba(255, 255, 255, .9);
+}
+
+p {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+a {
+    color: #E63946;
+    display: inline-block;
+    margin-top: 20px;
+    position: relative;
+    text-decoration: none;
+}
+
+a::after {
+    background-color: #E63946;
+    content: "";
+    height: 2px;
+    left:0;
+    position: absolute;
+    top: 100%;
+    transition: width .3s ease-in-out;
+    width: 0;
+}
+
+a:hover:after {
+    width: 100%;
 }
