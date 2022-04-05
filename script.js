@@ -75,6 +75,7 @@ document.querySelector('[data-delete]').addEventListener('click', function() {
     if (operandOne !== '' && op === '') {
         display.textContent = display.textContent.slice(0, -1)
         operandOne = operandOne.slice(0, -1)
+        calculated = false
     }
     if (operandOne !== '' && op !== '' && operandTwo !== '') {
         display.textContent = display.textContent.slice(0, -1)
@@ -83,7 +84,7 @@ document.querySelector('[data-delete]').addEventListener('click', function() {
 })
 
 document.querySelector('[data-period]').addEventListener('click', function() {
-    if (operandOne !== '' && op === '' && !operandOne.includes('.')) {
+    if (operandOne !== '' && op === '' && !operandOne.includes('.') && calculated === false) {
         display.textContent += '.'
         operandOne += '.'
     }
