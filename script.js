@@ -52,10 +52,10 @@ function calculateDisplay() {
 
 function applyOperator() {
     switch (op) {
-        case '÷': return +operandOne / +operandTwo
-        case 'x': return +operandOne * +operandTwo
-        case '-': return +operandOne - +operandTwo
-        case '+': return +operandOne + +operandTwo
+        case '÷': return Math.round((+operandOne / +operandTwo) * 100) / 100
+        case 'x': return Math.round((+operandOne * +operandTwo) * 100) / 100
+        case '-': return Math.round((+operandOne - +operandTwo) * 100) / 100
+        case '+': return Math.round((+operandOne + +operandTwo) * 100) / 100
     }
 }
 
